@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Pemrograman Web</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-6">
+            <h1 class="text-2xl font-bold mb-6">Input Data</h1>
+            <form id="formMahasiswa" class="space-y-4">
+                <div>
+                    <label for="nama_lengkap" class="block text-black">NAMA LENGKAP</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan Nama"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-500 bg-white" required>
+                </div>
+                <div>
+                    <label for="nim" class="block text-black">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="2411102441049"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-500 bg-white" required>
+                </div>
+                <div>
+                    <label for="semester" class="block text-black">SEMESTER</label>
+                    <input type="text" id="semester" name="semester" placeholder="1-8"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-500 bg-white"required>
+                </div>
+                <div>
+                    <label for="prodi" class="block text-black">PROGRAM STUDI</label>
+                    <select id="prodi" name="prodi"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-500 bg-white" required>
+                        <option value="">--pilih--</option>
+                        <option value="TI">TI</option>
+                        <option value="SI">SI</option>
+                        <option value="TK">T.Mesin</option>
+                        <option value="TK">T.Sipil</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm text-black">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder="2411102441049@gmail.com"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-500 bg-white sm:text-sm"
+                    required>
+                </div>
+                <div class="pt-2">
+                    <button type="submit"
+                        class="w-full cursor-pointer bg-gray-800 text-white py-2 px-4 font-semibold">KIRIM DATA
+                    </button>
+                </div>
+                <p class="text-xs text-gray-900 mt-2">Isi data mahasiswa dengan benar</p>
+            </form>
+        </div>
+        
+        <div class="space-y-8">
+            <div class="bg-white p-6 ">
+                <h2 class="text-xl font-bold mb-4 pb-2">Informasi Pengirim</h2>
+                <p class="mb-2 font-bold">Apa yang terjadi saat anda klik "kirim data"?</p>
+                <ul class="list-inside space-y-1">
+                    <li>Data ditampilkan di console</li>
+                    <li>Data disimpan di array</li>
+                    <li>Jumlah data di-update</li>
+                    <li>Form akan kosong kembali</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6">
+                <h2 class="text-xl font-bold mb-4">Table Mahasiswa</h2>
+                <div>
+                    <table class="min-w-full border border-gray-300">
+                        <thead>
+                            <tr class="text-left text-sm font-semibold text-black uppercase bg-gray-200">
+                                <th class="px-4 py-2 border border-gray-300">No</th>
+                                <th class="px-4 py-2 border border-gray-300">Nama</th>
+                                <th class="px-4 py-2 border border-gray-300">Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2 border border-gray-300">1</td>
+                                <td class="px-4 py-2 border border-gray-300">Budi Susanto</td>
+                                <td class="px-4 py-2 border border-gray-300">Prodi : TI<br>Semester : 3</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border border-gray-300">2</td>
+                                <td class="px-4 py-2 border border-gray-300">Siti Nurfaka</td>
+                                <td class="px-4 py-2 border border-gray-300">Prodi : SI<br>Semester : 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
